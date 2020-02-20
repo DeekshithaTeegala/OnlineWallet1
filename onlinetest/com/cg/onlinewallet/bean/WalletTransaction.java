@@ -3,7 +3,7 @@ package com.cg.onlinewallet.bean;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class WalletTransaction extends WalletAccount {
+public class WalletTransaction {
 
 	
 	private int transactionId;
