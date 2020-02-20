@@ -47,8 +47,7 @@ public class Client {
 	        switch(choice)
 	        {
 	        case 1:
-	        	//System.out.println("enter accountId");
-	        	//int accountId = scanner.nextInt();
+	        	
 	        	System.out.println("enter balance");
 	        	double balance = scanner.nextDouble();
 	        	
@@ -57,7 +56,7 @@ public class Client {
 	        	walletAccount = new WalletAccount();
 	        	walletTransaction=new WalletTransaction();
 	        	walletTransaction.setAccountBalance(balance);
-	        	//walletAccount.setAccountId(accountId);
+	        
 	        	walletAccount.setBalance(balance);
 	        	
 	        	try {
@@ -92,7 +91,7 @@ public class Client {
 	        		double bal=walletAccount.getBalance();
 	        	
 					System.out.println(bal);
-					System.out.println("debited successfully");
+					System.out.println("DEBITED SUCCESSFULLY");
 	        	 }
 	        	catch(AccountException  e)
 	        	{
@@ -117,7 +116,7 @@ public class Client {
 			        	walletTransaction.setAmount(amount);
 			        	double balance3=walletAccount.getBalance();
 			        	System.out.println(balance3);
-			        	System.out.println("credited successfully");
+			        	System.out.println("CREDITED SUCCESSFULLY");
 		        		 
 		        	 }
 		        	catch(AccountException  e)
@@ -132,7 +131,7 @@ public class Client {
 	        	      int id = scanner.nextInt();
 	        	      List<WalletAccount> list1=null;
         		        walletAccount=accountService.deleteAccount(id);
-        		       System.out.println("Account deleted successfully");
+        		       System.out.println("ACCOUNT DELETED SUCCESSFULLY");
 	                  }
 	              catch(AccountException  e)
         	     {
@@ -173,7 +172,11 @@ public class Client {
 	        	         System.out.println("enter amount to transfer");
 	        	         double amount=scanner.nextDouble();
 	        	         accountService.fundTransfer(accountId1, accountId2, amount);
-	        	         System.out.println("amount successfully transfered");
+	        	         WalletAccount walletAccount1=accountService.find(accountId1);
+	        	        System.out.println(" walletaccount1 balance is: "+ walletAccount1.getBalance());
+	        	         WalletAccount walletAccount2=accountService.find(accountId2);
+	        	         System.out.println( " walletaccount1 balance is: "+walletAccount2.getBalance());
+	        	         System.out.println("AMOUNT SUCCESSFULLY TRANSFERRED");
 	                  }
 	                catch(AccountException  e)
                     {

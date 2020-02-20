@@ -14,5 +14,5 @@ public interface AccountService {
 	public double deposit(int accountId , double amount) throws AccountException;
 	public WalletAccount deleteAccount(int accountId) throws AccountException;
 	public List<WalletTransaction> findAllTransaction(int transactionId) throws AccountException;
-
+	public WalletAccount  find(int accountId) throws AccountException ;
 }

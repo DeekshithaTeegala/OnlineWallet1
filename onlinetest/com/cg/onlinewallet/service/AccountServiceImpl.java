@@ -94,10 +94,17 @@ public class AccountServiceImpl implements AccountService
 		return accountDao.deleteAccount(accountId);
 		
 	}
+	@Override
 	public List<WalletTransaction> findAllTransaction(int accountId) throws AccountException
 	{
 		WalletAccount walletAccount=accountDao.find(accountId);
 		return accountDao.findAllTransaction(accountId);
+	}
+	@Override
+	public WalletAccount  find(int accountId) throws AccountException 
+	{
+	
+		return accountDao.find(accountId);
 	}
 	
 }
