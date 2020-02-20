@@ -3,7 +3,8 @@ package com.cg.onlinewallet.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WalletAccount {
+public class WalletAccount 
+{
 	
 	private int accountId;
 	private double balance;
@@ -11,7 +12,8 @@ public class WalletAccount {
 	private List<WalletTransaction> list;
 	
 	
-	public WalletAccount(int accountId, double balance, WalletAccountType status, List<WalletTransaction> list) {
+	public WalletAccount(int accountId, double balance, WalletAccountType status, List<WalletTransaction> list)
+	{
 		super();
 		this.accountId = accountId;
 		this.balance = balance;
@@ -24,30 +26,38 @@ public class WalletAccount {
 		
 	}
 	
-	public List<WalletTransaction> getList() {
+	public List<WalletTransaction> getList()
+	{
 		return list;
 	}
-	public void setList(List<WalletTransaction> list) {
+	public void setList(List<WalletTransaction> list) 
+	{
 		this.list = list;
 	}
 	
 	
-	public int getAccountId() {
+	public int getAccountId()
+	{
 		return accountId;
 	}
-	public void setAccountId(int accountId) {
+	public void setAccountId(int accountId) 
+	{
 		this.accountId = accountId;
 	}
-	public double getBalance() {
+	public double getBalance() 
+	{
 		return balance;
 	}
-	public void setBalance(double balance) {
+	public void setBalance(double balance)
+	{
 		this.balance = balance;
 	}
-	public WalletAccountType getStatus() {
+	public WalletAccountType getStatus() 
+	{
 		return status;
 	}
-	public void setStatus(WalletAccountType status) {
+	public void setStatus(WalletAccountType status)
+	{
 		this.status = status;
 	}
 	public void addTransaction(WalletTransaction transaction)

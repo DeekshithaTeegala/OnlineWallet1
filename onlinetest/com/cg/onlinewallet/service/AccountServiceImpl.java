@@ -43,7 +43,8 @@ public class AccountServiceImpl implements AccountService
 	}
 
 	@Override
-	public double withdraw(int accountId, double amount) throws AccountException {
+	public double withdraw(int accountId, double amount) throws AccountException 
+	{
 		
 		
 		
@@ -70,7 +71,8 @@ public class AccountServiceImpl implements AccountService
 
 
 	@Override
-	public double deposit(int accountId, double amount) throws AccountException {
+	public double deposit(int accountId, double amount) throws AccountException 
+	{
 		WalletAccount walletAccount=accountDao.find(accountId);
 		WalletTransaction transaction = new WalletTransaction();
 

@@ -1,18 +1,21 @@
 package com.cg.onlinewallet.exception;
 
-public class AccountException extends Exception{
+public class AccountException extends Exception
+{
 
-	public AccountException(String message) {
+	public AccountException(String message)
+	{
 		super(message);
 		
 	}
 
-	public AccountException() {
+	public AccountException()
+	{
 		super();
 	}
 		
 	
-	}
+}
 	
 	
 	

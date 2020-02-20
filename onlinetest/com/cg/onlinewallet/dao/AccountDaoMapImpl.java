@@ -35,12 +35,13 @@ public class AccountDaoMapImpl implements AccountDao
 	@Override
 	public int createWalletAccount(WalletAccount walletAccount) throws AccountException
 	{
-		if(accountMap.containsKey(walletAccount.getAccountId())) {
-//		walletAccount=accountMap.get(walletAccount.getAccountId());
-		//WalletTransaction walletTransaction =new WalletTransaction(walletAccount.getTransactionId(),walletAccount.getBalance(),walletAccount.getStatus(),walletAccount.getList());
+		if(accountMap.containsKey(walletAccount.getAccountId())) 
+		{
+
 		throw new AccountException("Id Exists");
 		}
-		else {	
+		else
+		{	
 			accountMap.put(walletAccount.getAccountId(), walletAccount);  
 		}
 		return walletAccount.getAccountId();
@@ -90,7 +91,8 @@ public class AccountDaoMapImpl implements AccountDao
 
 	
 	@Override
-	public WalletAccount deleteAccount(int accountId) throws AccountException {
+	public WalletAccount deleteAccount(int accountId) throws AccountException
+	{
 		
 		WalletAccount walletAccount=accountMap.get(accountId);
 		

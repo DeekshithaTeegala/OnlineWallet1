@@ -15,7 +15,8 @@ public class WalletTransaction {
 	
 	
 	public WalletTransaction(int transactionId, String description, LocalDateTime dateOfTransaction,
-			double amount,double accountBalance) {
+			double amount,double accountBalance)
+	{
 		super();
 		this.transactionId = transactionId;
 		this.description = description;
@@ -25,40 +26,51 @@ public class WalletTransaction {
 	}
 	
 	
-	public WalletTransaction() {
+	public WalletTransaction()
+	{
 		super();
 		
 	}
 
 
-	public int getTransactionId() {
+	public int getTransactionId() 
+	{
 		return transactionId;
 	}
-	public void setTransactionId(int transactionId) {
+	public void setTransactionId(int transactionId)
+	{
 		this.transactionId = transactionId;
 	}
-	public String getDescription() {
+	public String getDescription()
+	{
 		return description;
 	}
-	public void setDescription(String description) {
+	public void setDescription(String description)
+	{
 		this.description = description;
 	}
-	public LocalDateTime getDateOfTransaction() {
+	public LocalDateTime getDateOfTransaction()
+	{
 		return dateOfTransaction;
 	}
-	public void setDateOfTransaction(LocalDateTime dateOfTransaction) {
+	public void setDateOfTransaction(LocalDateTime dateOfTransaction)
+	{
 		this.dateOfTransaction = dateOfTransaction;
 	}
-	public double getAmount() {
+	public double getAmount()
+	{
 		return Amount;
 	}
-	public void setAmount(double amount) {
+	public void setAmount(double amount)
+	{
 		Amount = amount;
 	}
-	public double getAccountBalance() {
+	public double getAccountBalance()
+	{
 		return accountBalance;
 	}
-	public void setAccountBalance(double accountBalance) {
+	public void setAccountBalance(double accountBalance)
+	{
 		this.accountBalance = accountBalance;
 	}
 	
