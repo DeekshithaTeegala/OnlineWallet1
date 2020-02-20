@@ -74,16 +74,17 @@ public class Client {
 	        	try {
 	        	 System.out.println("Enter account Id");
 	        	 
-	        		 int id = scanner.nextInt();
+	        		 int accountId = scanner.nextInt();
+	        		 accountService.find(accountId);
 	        		 System.out.println("enter amount to withdraw");
 	        		 double amount = scanner.nextDouble();
-	        		 System.out.println("enter account type");
+	        		
 	        		 
-	        		 double balance1= accountService.withdraw(id, amount);
+	        		 double balance1= accountService.withdraw(accountId, amount);
 	        		 
 
 	 	        	
-	 	        	walletAccount.setAccountId(id);
+	 	        	walletAccount.setAccountId(accountId);
 	 	        	walletAccount.setBalance(balance1);
 	 	        	walletTransaction=new WalletTransaction();
 		        	walletTransaction.setAmount(amount);
@@ -104,13 +105,14 @@ public class Client {
 	        	try {
 		        	 System.out.println("Enter account Id");
 		        	 
-		        		 int id = scanner.nextInt();
+		        		 int accountId = scanner.nextInt();
+		        		 accountService.find(accountId);
 		        		 System.out.println("enter amount to deposit");
 		        		 double amount = scanner.nextDouble();
-		        		double balance2 = accountService.deposit(id, amount);
+		        		double balance2 = accountService.deposit(accountId, amount);
 		        		
 		        		walletAccount = new WalletAccount();
-		 	        	walletAccount.setAccountId(id);
+		 	        	walletAccount.setAccountId(accountId);
 		 	        	walletAccount.setBalance(balance2);
 		 	        	walletTransaction=new WalletTransaction();
 			        	walletTransaction.setAmount(amount);
