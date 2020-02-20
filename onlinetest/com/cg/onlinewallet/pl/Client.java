@@ -175,7 +175,7 @@ public class Client {
 	        	         WalletAccount walletAccount1=accountService.find(accountId1);
 	        	        System.out.println(" walletaccount1 balance is: "+ walletAccount1.getBalance());
 	        	         WalletAccount walletAccount2=accountService.find(accountId2);
-	        	         System.out.println( " walletaccount1 balance is: "+walletAccount2.getBalance());
+	        	         System.out.println( " walletaccount2 balance is: "+walletAccount2.getBalance());
 	        	         System.out.println("AMOUNT SUCCESSFULLY TRANSFERRED");
 	                  }
 	                catch(AccountException  e)
