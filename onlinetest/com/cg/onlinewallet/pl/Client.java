@@ -155,8 +155,8 @@ public class Client {
 	            	   wt.setDateOfTransaction(dateTime);
 	            	
 	        	     System.out.println
-	        	     ("account id is "+accountId+" transaction id is "+id + ", amount is "+amount+", description"+
-	        	     des +", on" + dateTime+", account type is "+type);
+	        	     ("account id is "+accountId+", transaction id is "+id + ", amount is "+amount+","
+	        	     		+ " description"+ des +", on" + dateTime+", account type is "+type.SAVING);
 	              }
 	            }
 	                catch(AccountException  e)
