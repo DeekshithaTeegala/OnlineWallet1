@@ -70,9 +70,9 @@ public class Client {
 	        	}
 	        	break;
 	        	
-	        case 2:
-	        	try {
-	        	 System.out.println("Enter account Id");
+	        case 2:try
+	               {
+	        	     System.out.println("Enter account Id");
 	        	 
 	        		 int accountId = scanner.nextInt();
 	        		 accountService.find(accountId);
@@ -101,8 +101,8 @@ public class Client {
 	        	break;
 	        	
 	        case 3:
-	        	
-	        	try {
+	        	     try
+	        	     {
 		        	 System.out.println("Enter account Id");
 		        	 
 		        		 int accountId = scanner.nextInt();
@@ -143,27 +143,27 @@ public class Client {
 	        
 	        case 5:try
 	               {
-	        	System.out.println("enter account id");
-	        	int accountId = scanner.nextInt();
-	        	LocalDateTime dateTime=LocalDateTime.now();
-	        	 list=accountService.findAllTransaction(accountId);
-	              for(WalletTransaction wt:list) 
-	              {
-	           	   int id=wt.getTransactionId();
-	            	   String des=wt.getDescription();
-	            	   double amount=wt.getAmount();
-	            	   double accBal=wt.getAccountBalance();
-	            	   wt.setDateOfTransaction(dateTime);
+	        	     System.out.println("enter account id");
+	        	     int accountId = scanner.nextInt();
+	        	     LocalDateTime dateTime=LocalDateTime.now();
+	        	     list=accountService.findAllTransaction(accountId);
+	                 for(WalletTransaction wt:list) 
+	                  {
+	           	         int id=wt.getTransactionId();
+	            	     String des=wt.getDescription();
+	            	     double amount=wt.getAmount();
+	            	     double accBal=wt.getAccountBalance();
+	            	     wt.setDateOfTransaction(dateTime);
 	            	
-	        	     System.out.println
-	        	     ("account id is "+accountId+", transaction id is "+id + ", amount is "+amount+","
-	        	     		+ " description"+ des +", on" + dateTime+", account type is "+type.SAVING);
-	              }
-	            }
-	                catch(AccountException  e)
-   	                   {
+	        	         System.out.println
+	        	         ("account id is "+accountId+", transaction id is "+id + ", amount is "+amount+","
+	        	        		+ " description"+ des +", on" + dateTime+", account type is "+type.SAVING);
+	                  }
+	               }
+	               catch(AccountException  e)
+   	                 {
    		                System.err.println(e.getMessage());
-   	                  }
+   	                 }
 	                 break;
 	        case 6: try
 	                  {
@@ -180,15 +180,15 @@ public class Client {
 	        	         System.out.println( " walletaccount2 balance is: "+walletAccount2.getBalance());
 	        	         System.out.println("AMOUNT SUCCESSFULLY TRANSFERRED");
 	                  }
-	                catch(AccountException  e)
-                    {
-                      System.err.println(e.getMessage());
-                    }
-          break;
+	                  catch(AccountException  e)
+                      {
+                       System.err.println(e.getMessage());
+                      }
+                      break;
 	        case 7:
-	        	System.out.println("Thank you");
+	        	   System.out.println("Thank you");
 	        	
-	        	return;
+	        	   return;
 	        	}
 	        }
 	        
